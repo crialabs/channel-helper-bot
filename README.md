@@ -1,66 +1,66 @@
-# Channel Helper Bot
+# Bot auxiliar de canal
 
-Channel Helper Bot 是一个 Telegram Bot，用于给频道添加简单的评论功能。Channel Helper Bot 的功能包括：在频道中创建评论区、收集用户评论和显示最近评论等。使用 Channel Helper Bot 能够为频道提供一个评论的平台，实现轻度的社交功能，有助于促进频道主与关注者、关注者和关注者之间直接的交流和沟通。
+O Channel Helper Bot é um bot do Telegram que adiciona funcionalidades simples de comentários aos canais. As funções do Channel Helper Bot incluem: criar uma área de comentários em um canal, coletar comentários dos usuários e exibir comentários recentes. O Channel Helper Bot pode fornecer uma plataforma de comentários para o canal, realizar funções sociais leves e ajudar a promover trocas e comunicações diretas entre proprietários e seguidores do canal, e entre seguidores.
 
-## 特性
+## Características
 
-### 简单的评论管理
+### Gerenciamento simples de comentários
 
-在频道主发布了新的消息后，仅需要通过简单的操作即可呼出评论区。当频道消息对应的评论区出现在频道中时，关注者即可进行评论操作。
+Depois que o proprietário do canal publica uma nova mensagem, ele pode abrir a área de comentários com apenas algumas operações simples. Quando a área de comentários correspondente à mensagem do canal aparece no canal, os seguidores podem fazer comentários.
 
-在自动模式下，频道主发布完消息后，无需任何操作，评论区会自动出现。
+No modo automático, depois que o proprietário do canal postar uma mensagem, a área de comentários aparecerá automaticamente, sem nenhuma operação necessária.
 
-在手动模式下，频道主发布完消息后，仅需要以 `/command` 指令回复发布的消息，就可出现评论区。
+No modo manual, depois que o proprietário do canal publica uma mensagem, ele só precisa responder à mensagem postada com o comando `/command` para que a área de comentários apareça.
 
-### 方便的评论过程
+### Processo de revisão conveniente
 
-每一个评论区都有两个按钮，“添加评论”和“显示所有评论”。点击按钮即自动跳转到 Channel Helper Bot 页面，按照提示进行操作即可完成评论和浏览。
+Cada área de comentários tem dois botões: "Adicionar comentário" e "Mostrar todos os comentários". Clique no botão para pular automaticamente para a página do Channel Helper Bot. Siga as instruções para concluir os comentários e a navegação.
 
-在点击“添加评论”之后，即进入评论模式，向 bot 写下想说的话即可发布评论。如需退出评论模式，请使用 `/cancel` 命令。
+Após clicar em "Adicionar comentário", você entrará no modo de comentário e escreverá o que deseja dizer ao bot para postar um comentário. Para sair do modo de comentário, use o comando `/cancel`.
 
-在点击“显示所有评论”之后，bot 会在私聊页面显示一个可翻页的评论区，用户能够查看所有之前的评论信息（支持查看贴纸、图片、视频、文件等），管理员可以在这里进行删除消息、封禁用户的操作。
+Após clicar em "Mostrar todos os comentários", o bot exibirá uma área de comentários reversível na página de bate-papo privada, onde os usuários podem visualizar todas as informações de comentários anteriores (compatível com visualização de adesivos, fotos, vídeos, arquivos, etc.) e os administradores podem excluir mensagens e banir usuários aqui.
 
-### 轻松的配置流程
+### Processo de configuração fácil
 
-配置过程十分简单，频道主只需几个步骤即可轻松完成 Channel Helper Bot 的配置。
+O processo de configuração é muito simples, e os proprietários dos canais podem facilmente concluir a configuração do Channel Helper Bot em apenas algumas etapas.
 
-1. 将 bot 添加为频道的管理员，同时 bot 需要足够的权限进行消息的发送和编辑。
+1. Adicione o bot como administrador do canal. O bot precisa de permissões suficientes para enviar e editar mensagens.
 
-2. 向 bot 私聊发送 `/register` 命令，按照 bot 的指示从频道中转发一条消息，用以记录频道的相关信息。
+2. Envie o comando `/register` para o bot no chat privado e siga as instruções do bot para encaminhar uma mensagem do canal para registrar as informações relevantes do canal.
 
-3. 发布一条消息看看吧！如果自动呼出评论区了则说明配置成功。（注：默认情况下 bot 为自动模式）
+3. Publique uma mensagem e veja! Se a área de comentários for chamada automaticamente, significa que a configuração foi bem-sucedida. (Observação: por padrão, o bot está no modo automático)
 
-4. 如果您需要修改配置（模式、最近消息条数等），请向 bot 发送 `/option`命令，按照提示进行配置。
+4. Se precisar modificar a configuração (modo, número de mensagens recentes, etc.), envie o comando `/option` para o bot e siga as instruções para configurar.
 
-### 智慧的一物多用
+### Inteligente Multiuso
 
-Channel Helper Bot 并不满足于只服务一个频道。任何人都可以通过配置来添加和使用 Channel Helper Bot。同时 bot 本身也是开源的，您可以根据自己的需要另行部署。[@jogle_channel_bot](https://t.me/jogle_channel_bot) 是作者进行部署的最新版 Bot，欢迎使用。
+O Channel Helper Bot não se contenta em servir apenas um canal. Qualquer pessoa pode adicionar e usar o Channel Helper Bot por meio da configuração. Ao mesmo tempo, o bot em si é de código aberto e você pode implantá-lo de acordo com suas necessidades. [@jogle_channel_bot](https://t.me/jogle_channel_bot) é a versão mais recente do Bot implantada pelo autor, fique à vontade para usá-la.
 
-## 部署
+## Implantação
 
-为了能运行 Channel Helper Bot，需要准备一个 Python 3 的环境，并需要使用 pip安装相应的依赖。
+Para executar o Channel Helper Bot, você precisa preparar um ambiente Python 3 e instalar as dependências correspondentes usando pip.
 
-### 安装依赖 
+### Dependências de instalação
 
-`pip3 install python-telegram-bot`
+`pip3 instala python-telegram-bot`
 
-### 配置文件
+### Arquivo de configuração
 
-请将 `helper_const.py.sample` 重命名为 `helper_const.py`，并填写其中的配置项目。
+Renomeie `helper_const.py.sample` para `helper_const.py` e preencha os itens de configuração.
 
-| 配置项目             | 类型          | 含义                                             
-|----------------------|---------------|--------------------------------------------------
-| BOT_TOKEN            | (str)         | Telegram Bot 的 token                            
-| BOT_OWNER            | (list of int) | bot 管理员的 userID                              
-| MIN_REFRESH_INTERVAL | (int)         | 最小刷新时间间隔，单位为秒                                 
-| MODULE_NAME          | (list of str) | 启用的模块名称（如无特殊需求，则不需要更改这项） 
-| DATABASE_DIR        | (str)         | 数据库存放位置                             
-------------------------------------------------------------------------------------------
+| Item de configuração | Tipo | Significado
+|----------------------|---------------|-------------------------------------------------
+| BOT_TOKEN | (str) | Token do bot do Telegram
+| PROPRIETÁRIO DO BOT | (lista de int) | ID do usuário do proprietário do bot
+| INTERVALO_DE_ATUALIZAÇÃO_MIN | (int) | Intervalo mínimo de atualização em segundos
+| NOME_DO_MÓDULO | (lista de str) | O nome do módulo habilitado (se não houver nenhum requisito especial, você não precisa alterar isso)
+| DATABASE_DIR | (str) | Local de armazenamento do banco de dados
+------------------------------------------------------------------------------------------------
 
-### 运行 bot 
+### Execute o bot
 
 `python3 helper_main.py`
 
-## 致谢
+## Agradecimentos
 
-Channel Helper Bot 使用了 [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot) 的 Bot API。
+O Channel Helper Bot usa a API de bot do [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot).
